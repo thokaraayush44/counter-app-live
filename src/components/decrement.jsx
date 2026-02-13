@@ -1,11 +1,13 @@
-function Decrement({symbol, label, count, setCount}) {
+function Decrement({label, count,  setCount, numberToSubtract}) {
 
   const handleDecrement=()=> {
-    setCount(count - 1)
+    setCount(count - numberToSubtract)
   }
   
   return (
-    <button className="decrement-btn" onClick={handleDecrement}>{symbol}{label}</button>
+    <button className="decrement-btn" onClick={handleDecrement}>
+      {label}
+      </button>
   )
 
 }
